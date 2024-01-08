@@ -1,0 +1,28 @@
+Hasan Khwaja
+Prof. Keith
+CS 5001 
+9 December 2022
+      
+      When looking at the design for the project, functions that were used for creating and 
+drawing the game board itself were relegated to the prework file in which area for the leaderboard, 
+user interface and play space were all made. In addition to this, characteristics of the game board 
+such as loading in assets and creating interactable user interface elements were delegated to the 
+game board file. This separation of functions seemed to make sense as each file would facilitate 
+related tasks in terms of different parts of the project. However, that thought process began to 
+change once each specific tile was worked with. 
+
+      Working with the tile placement proved the extent of how complex the idea of working with 
+several different puzzles was. At first, the idea of storing each puzzle in a separate file was 
+attempted, but then problems occurred in which the previous puzzle would not be fully cleared from 
+the play space. In addition to this the logic used for swapping and restricting tile movement 
+depended on those functions sharing turtles with their respective puzzles. The solution to this 
+problem was to then store all functions for tile placement and movement to be stored in the same file. 
+This then led to having most turtles called, be called as global variables as a solution.
+ 
+      Along with the turtles, the number of player clicks, moves, as well as the player named 
+all needed to be initialized as global variables as well. This was done to allow for these variables 
+to be called such that they can be updated, in real time, onscreen while also keeping track of the 
+player’s name to be stored onto the leaderboard from the dialog box. After the work concerning game 
+mechanics was completed, the project was left with a large file. This was due to how each turtle 
+and set of coordinates needed to be reused for each puzzle along with the ability to track how those 
+tiles were moved
